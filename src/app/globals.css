@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -24,10 +26,49 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+@media (max-width:1080px) {
+  .nav {
+    flex-direction: column;
+  }
+
+  .header {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .header p {
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+
+  .me {
+    width: 200px;
+  }
+}
+
+.navbuttons::after {
+  content: ''; /* Required for pseudo-element */
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px; /* Adjust the height of the underline as needed */
+  background-color: blue; /* Change the color of the underline as needed */
+  transition: width 0.3s ease; /* Animation transition */
+}
+
+/* Define the hover effect to animate the underline */
+.navbuttons:hover::after {
+  width: 100%; /* Expand the width of the underline */
 }
