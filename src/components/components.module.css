@@ -1,0 +1,59 @@
+.nav {
+    width: 1080px;
+    padding: 1em 3em;
+    margin: 2em auto;
+    top: 2rem;
+    background-color: rgba(var(--foreground-rgb), 0.1);
+    box-shadow: 0 5px 10px 5px rgba(var(--background-rgb), 0.3);
+    border-radius: 20px;
+    position: sticky;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbutton {
+    position: relative;
+}
+
+.navbutton::after {
+    content: ''; /* Required for pseudo-element */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px; /* Adjust the height of the underline as needed */
+    background-color: blue; /* Change the color of the underline as needed */
+    transition: width 0.3s ease; /* Animation transition */
+}
+  
+/* Define the hover effect to animate the underline */
+.navbutton:hover::after {
+    width: 100%; /* Expand the width of the underline */
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    margin-top: 4rem;
+}
+
+.contentTitle {
+    font-size: 2em;
+    text-align: center;
+}
+
+.home {
+    width: 1080px;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.home h1 {
+    font-size: 2rem;
+}
