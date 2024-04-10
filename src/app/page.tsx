@@ -1,9 +1,11 @@
-import Contents from '@/components/contents';
+import { NavBar } from './components/NavBar';
+import ThemeSwitch from './components/ThemeSwitch';
 
-export default function Home() {
+export default function Home({ children }: { children : React.ReactNode }) {
   return (
-    <main className='pl-8 pr-8'>
-      <Contents></Contents>
+    <main className='h-screen'>
+      <NavBar />
+      <ThemeSwitch />
     </main>
   );
 }
