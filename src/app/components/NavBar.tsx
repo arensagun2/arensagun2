@@ -1,4 +1,4 @@
-export function NavBar() {
+export default function NavBar() {
     return (
         <div>
             <button>Home</button>

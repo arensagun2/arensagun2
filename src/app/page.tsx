@@ -1,4 +1,4 @@
-import { NavBar } from './components/NavBar';
+import NavBar from './components/NavBar';
 import ThemeSwitch from './components/ThemeSwitch';
 
 export default function Home({ children }: { children : React.ReactNode }) {
