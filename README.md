@@ -1,6 +1,6 @@
 # My Personal Portfolio
 
-Made with Next.js
+Made with Vite ReactJS
 
 ## Link to my web app
 
