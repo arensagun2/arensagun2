@@ -1,6 +1,6 @@
-# My Personal Portfolio
+# My Portfolio
 
-Made with Vite ReactJS
+Made with Vite ReactJS using Typescript
 
 ## Link to my web app
 
