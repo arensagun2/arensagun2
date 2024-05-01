@@ -4,15 +4,16 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 0rem 4rem;
+  gap: 0rem 2rem;
+  padding: 2rem;
 }
 
-.me {
+.header .me {
   width: 300px;
   height: auto;
 
-  border-radius: 50px;
-  box-shadow: 0 5px 50px 1px rgba(255,255,255,0.3);
+  border-radius: 200px;
+  box-shadow: 0 0 50px 1px rgba(255,255,255,0.1);
   transition: all 0.3s ease-in-out;
 }
 
@@ -32,6 +33,21 @@
   text-align: center;
 }
 
+.content .information h2 {
+  width: 50vw;
+}
+
+.information .name {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.information .name p {
+  font-size: 1rem;
+  color: lightblue;
+}
+
 .social-icons {
   display: flex;
   gap: 2rem
@@ -45,20 +61,55 @@
   transition: all 0.1s ease-in-out;
 }
 
+/* Global Content Box Style */
+.content-box {
+  padding: 1rem;
+}
+
+/* About Me */
+.aboutme {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutme p {
+  text-align: justify;
+  width: 50vw;
+}
+
+/* Experience */
+.experience {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Media queries */
 @media (pointer: fine){
   .me:hover {
-    transform: scale(1.1)
+    transform: scale(1.05);
+    box-shadow: 0 0 75px 1px rgba(255,255,255,0.3);
   }
-  
+
   .social-icons .icon:hover {
     transform: translateY(-10px);
   }
 }
 
+@media (prefers-color-scheme: light) {
+  .header .me {
+    box-shadow: 0 5px 50px 1px rgba(0,0,0,0.5);
+  }
 
-/* About Me */
-.aboutme {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  .social-icons a {
+    color: black;
+  }
+
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
 }

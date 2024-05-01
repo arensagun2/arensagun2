@@ -1,8 +1,6 @@
-import myPic from '../assets/myPicCrop.jpg'
-
-// FontAwesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faInstagram, faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import myPic from '../assets/myPicCrop.jpg'
+import { bachelor, college, name, socialLinks } from '../Info'
 
 export default function Header() {
     return (
@@ -11,19 +9,21 @@ export default function Header() {
                 <img src={myPic} alt="me" className='me' />
                 <div className='content'>
                     <div className='information'>
-                        <h1>ArenJosiah Sagun</h1>
-                        <h2>Upcoming Graduate at University of Massachusetts Boston</h2>
-                        <p>Hi Visitor, Welcome to my portfolio</p>
+                        <div className='name'>
+                            <h1>{name}</h1>
+                            <p>IAN</p>
+                        </div>
+                        
+                        <div>
+                            <h2>{college}</h2>
+                            <h2>{bachelor}</h2>
+                        </div>
+                        <p>Hi There! Welcome to my portfolio</p>
                     </div>
                     <div className='social-icons'>
-                        <a href='https://www.instagram.com/iahnsagun/' target='_blank'>
-                            <FontAwesomeIcon  icon={faInstagram} size='4x' className='icon'/></a>
-                        <a href='https://twitter.com/ArenJosiah' target='_blank'>
-                            <FontAwesomeIcon icon={faTwitter} size='4x' className='icon'/></a>
-                        <a href='https://github.com/arensagun2' target='_blank'>
-                            <FontAwesomeIcon  icon={faGithub} size='4x' className='icon'/></a>
-                        <a href='https://www.linkedin.com/in/arenjosiah-sagun-9b5959267/' target='_blank'>
-                            <FontAwesomeIcon icon={faLinkedin} size='4x' className='icon'/></a>
+                        {socialLinks.map((link) => {
+                            return <a href={link.link} target='_blank' key={link.name}><FontAwesomeIcon icon={link.icon} className='icon' size='4x'/></a>
+                        })}
                     </div>
                 </div>
             </div>
