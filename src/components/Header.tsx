@@ -1,28 +1,43 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { name, socialLinks, occupations } from '../Info'
+import {motion } from 'motion/react'
+import '../styles/Header.css'
 import myPic from '../assets/myPicCrop.jpg'
-import { bachelor, college, name, socialLinks } from '../Info'
+import { useEffect, useState } from 'react'
 
 export default function Header() {
+    const [i, setIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setIndex((prev) => (prev + 1) % occupations.length);
+        }, 5000);
+        return () => clearInterval(interval);
+    }, []);
+    
     return (
         <>
             <div className='header-box header'>
-                <img src={myPic} alt="me" className='me' />
                 <div className='content'>
                     <div className='information'>
-                        <div className='name'>
-                            <h1>{name}</h1>
-                            <p>IAN</p>
+                        <div className='text'>
+                            <h1 className='name'>Hi Visitor!<br></br>I'm <span>{name}.</span></h1>
+                            <h3 className='sub'>I am a
+                                <motion.span 
+                                    key={occupations[i]}
+                                    initial={{opacity: 0}}
+                                    animate={{opacity: 1}}
+                                    exit={{opacity: 0}}
+                                    transition={{duration: 0.5}}> {occupations[i]}
+                                </motion.span>
+                            </h3>
                         </div>
-                        
-                        <div>
-                            <h2>{college}</h2>
-                            <h2>{bachelor}</h2>
-                        </div>
-                        <p>Hi There! Welcome to my portfolio</p>
+                        <img src={myPic} alt="" className='me' />
                     </div>
+                    
                     <div className='social-icons'>
                         {socialLinks.map((link) => {
-                            return <a href={link.link} target='_blank' key={link.name}><FontAwesomeIcon icon={link.icon} className='icon' size='4x'/></a>
+                            return <motion.a whileHover={{y: -10}} href={link.link} target='_blank' key={link.name}><FontAwesomeIcon icon={link.icon} className='icon' size='4x'/></motion.a>
                         })}
                     </div>
                 </div>

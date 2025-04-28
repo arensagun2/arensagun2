@@ -1,17 +1,17 @@
+import { useEffect } from 'react'
 import './App.css'
 // Components
 import Header from './components/Header'
-import AboutMe from './components/AboutMe'
-import Experience from './components/Experience'
 
 function App() {
+  useEffect(() => {
+    document.title = "Ian Sagun"
+  }, [])
 
   return (
     <>
       <div className='container'>
         <Header />
-        <AboutMe />
-        <Experience />
       </div>
     </>
   )
