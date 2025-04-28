@@ -11,7 +11,7 @@ export default function Header() {
     useEffect(() => {
         const interval = setInterval(() => {
             setIndex((prev) => (prev + 1) % occupations.length);
-        }, 5000);
+        }, 3000);
         return () => clearInterval(interval);
     }, []);
     
