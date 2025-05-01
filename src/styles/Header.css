@@ -46,7 +46,7 @@
 
 .social-icons {
     display: flex;
-    gap: 2rem
+    gap: 3rem;
 }
 
 .social-icons a {
