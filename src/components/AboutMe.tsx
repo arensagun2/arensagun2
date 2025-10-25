@@ -15,7 +15,7 @@ function AboutMe() {
         [0.5, 1, 0.5]
     )
     return (
-        <motion.div className='about-me-in'
+        <motion.div className='about-me'
             ref={thisElementRef}
             style={{scale}}
         >
