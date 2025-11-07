@@ -11,9 +11,12 @@ export const socialLinks = [
     {name: "linkedIn", link: "https://www.linkedin.com/in/ian-sagun-9b5959267/", icon: faLinkedin}
 ]
 // Changing Texts
-export const occupations = ["Software Engineer", "Front-End Developer", "Gamer"]
+export const occupations = ["Software Engineer", "Front-End Developer", "Engineer", "Gamer"]
 // About Me
-export const aboutMe = "Hello, I am Ian. I am a passionate Software Engineer, with a background in Computer Science, I thrive on problem solving and critical thinking. I'm always eager to learn, grow, and explore new opportunities. When I'm not coding, you can find me playing video games or on discord with friends. Let's connect and explore together!"
+export const aboutMe = `
+Hi, I’m Ian, a passionate Software Engineer with a strong foundation in Computer Science. I love tackling complex problems through creative solutions and critical thinking. My curiosity drives me to constantly learn, experiment, and grow — whether it’s exploring new technologies or refining my craft.
+When I’m not deep in code, you’ll probably find me gaming, chatting on Discord, or brainstorming new ideas with friends. I’m always excited to collaborate, share knowledge, and take on new challenges — let’s build something amazing together!
+`;
 // Projects
 export const projects = [
     {

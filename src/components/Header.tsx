@@ -33,7 +33,9 @@ export default function Header({view}: headerProps) {
                                     initial={{opacity: 0}}
                                     animate={{opacity: 1}}
                                     exit={{opacity: 0.5}}
-                                    transition={{duration: 0.5}}> {occupations[i]}
+                                    transition={{duration: 0.5}}
+                                >
+                                    {occupations[i]}
                                 </motion.span>
                             </h3>
                         </div>

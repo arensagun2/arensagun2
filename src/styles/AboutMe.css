@@ -9,7 +9,7 @@
     padding: 4rem 1rem;
 }
 .about-me p {
-    text-align: justify;
-    width: 75%;
+    text-align: start;
+    width: 50%;
     font-size: 18px;
 }
