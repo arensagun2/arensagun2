@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { motion } from 'motion/react';
 import './App.css'
 import Header from './components/Header'
-import { faArrowAltCircleLeft } from '@fortawesome/free-regular-svg-icons';
+import { faCircleLeft } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import AboutMe from './components/AboutMe';
 import Projects from './components/Projects';
@@ -22,7 +22,7 @@ function App() {
     <div className='main'>
       {viewResume && 
       <div className='pdf'>
-        <motion.a whileHover={{y: -5, cursor: 'pointer'}} onClick={toggle}><FontAwesomeIcon icon={faArrowAltCircleLeft} size='4x'/></motion.a>
+        <motion.a whileHover={{y: -5, cursor: 'pointer'}} onClick={toggle}><FontAwesomeIcon icon={faCircleLeft} size='4x'/></motion.a>
         <iframe
           src='/files/cv-iansagun.pdf'
           width="100%"

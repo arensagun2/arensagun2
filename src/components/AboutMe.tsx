@@ -17,7 +17,7 @@ function AboutMe() {
     return (
         <motion.div className='about-me'
             ref={thisElementRef}
-            style={{scale}}
+            style={{scale, opacity: scrollYProgress}}
         >
             <h1>About Me</h1>
             <p>{aboutMe}</p>

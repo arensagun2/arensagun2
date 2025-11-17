@@ -17,7 +17,7 @@ function Projects() {
     return (
         <motion.div className='projects'
             ref={thisElementRef}
-            style={{scale}}
+            style={{scale, opacity: scrollYProgress}}
         >
             <h1>Projects</h1>
             <div className='projects-container'>
