@@ -1,47 +1,56 @@
-import { useEffect, useState } from 'react'
-import { motion } from 'motion/react';
+import { useEffect } from 'react'
 import './App.css'
-import Header from './components/Header'
-import { faCircleLeft } from '@fortawesome/free-regular-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import AboutMe from './components/AboutMe';
-import Projects from './components/Projects';
+import AboutMe from './sections/AboutMe';
+import Projects from './sections/Projects';
+import { fullname } from './lang/en-us';
+import { motion, useMotionTemplate, useMotionValue, useSpring } from 'motion/react';
 
-function App() {
-  const [viewResume, setView] = useState(false);
+function Header() {
+  return (
+    <div className='header-container'>
+      <div className='header-card'>
+        <h1 className='title name'>{fullname}</h1>
+      </div>
+    </div>
+  )
+}
 
-  function toggle() {
-    setView((prev) => !prev);
-  }
+export default function App() {
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  const smoothX = useSpring(mouseX, { stiffness: 400, damping: 30 });
+  const smoothY = useSpring(mouseY, { stiffness: 400, damping: 30 });
+
+  useEffect(() => {
+    const handleMove = (e: MouseEvent) => {
+      mouseX.set(e.clientX);
+      mouseY.set(e.clientY);
+    };
+    window.addEventListener("mousemove", handleMove);
+    return () => window.removeEventListener("mousemove", handleMove);
+  }, [mouseX, mouseY]);
 
   useEffect(() => {
     document.title = "Ian Sagun"
   }, [])
 
   return (
-    <div className='main'>
-      {viewResume && 
-      <div className='pdf'>
-        <motion.a whileHover={{y: -5, cursor: 'pointer'}} onClick={toggle}><FontAwesomeIcon icon={faCircleLeft} size='4x'/></motion.a>
-        <iframe
-          src='/files/cv-iansagun.pdf'
-          width="100%"
-          height="100%"
-          style={{ border: "none" }}
-          title='My Resume'
-        >
-        </iframe>
-      </div>}
-      {!viewResume &&
-      <div className='container'>
-        <Header view={toggle} />
-        <div className='content-container'>
-          <AboutMe />
-          <Projects />
-        </div>
-      </div>}
+    <div className='main-body'>
+      <motion.div className='follow'
+        style={{
+          position: "fixed",
+          top: -250,
+          left: -250,
+          translateX: useMotionTemplate`${smoothX}px`,
+          translateY: useMotionTemplate`${smoothY}px`,
+        }}
+      ></motion.div>
+      <Header />
+      <div className='content-body'>
+        <AboutMe />
+        <Projects />
+      </div>
     </div>
   )
 }
-
-export default App

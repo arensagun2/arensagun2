@@ -1,24 +1,10 @@
-import '../styles/Projects.css'
-import { projects } from '../Info';
-import { motion, useScroll, useTransform } from 'motion/react';
-import { useRef } from 'react';
+import './styles/Projects.css'
+import { projects } from '../lang/en-us';
+import { motion } from 'motion/react';
 
 function Projects() {
-    const thisElementRef = useRef(null);
-    const { scrollYProgress } = useScroll({
-        target: thisElementRef,
-        offset: ["start end", "center center"]
-    });
-    const scale = useTransform(
-        scrollYProgress, 
-        [0, 0.5, 1], 
-        [0.5, 1, 0.5]
-    )
     return (
-        <motion.div className='projects'
-            ref={thisElementRef}
-            style={{scale, opacity: scrollYProgress}}
-        >
+        <motion.div className='projects'>
             <h1>Projects</h1>
             <div className='projects-container'>
                 {projects.map((project) => {

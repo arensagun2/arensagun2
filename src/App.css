@@ -1,37 +1,54 @@
-.main {
-  position: relative;
-  max-width: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 4rem;
-}
-
-.pdf {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  padding: 1rem;
-  width: 75vw;
-  height: 80vh;
-  /*min-width: 1120px;*/
-}
-
-.pdf a {
-  color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 5%;
+/* Div Mouse Follow */
+.follow {
+  z-index: -1;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(
+    circle,
+    rgba(55, 0, 255, 0.05) 0%,
+    rgba(55, 0, 255, 0.025) 20%,
+    rgba(55, 0, 255, 0.005) 40%,
+    rgba(55, 0, 255, 0) 100%
+  );
+  mask-image: radial-gradient(circle, blue 100%, transparent 100%);
 }
 
 /* Global Content Box Style */
+.title {
+  font-weight: 400;
+  font-size: 24px;
+}
 
-/* Media queries */
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
+/* Header */
+.header-container {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-card {
+  width: 50%;
+  height: 100%;
+  border-radius: 50px;
+  backdrop-filter: blur(50px);
+  background: radial-gradient(
+    circle,
+    rgba(255,255,255, 0.3) 20%,
+    rgba(255,255,255, 0.2) 40%,
+    rgba(255,255,255, 0.1) 60%,
+    rgba(255,255,255, 0.05) 100%
+  );
+
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+/* Content */
+.content-body {
+  display: grid;
 }

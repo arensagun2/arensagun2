@@ -1,22 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap');
 
 :root {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
+  font-family: "Google Sans Flex", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
   font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "wdth" 100,
+    "GRAD" 0,
+    "ROND" 0;
 
   color-scheme: light dark;
-  color: black;
-  background-color: antiquewhite;
-
+  
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  display: grid;
+
+  margin: 0;
+  padding: 1rem;
+  box-sizing: border-box;
+
+  --foreground: 24,24,24;
+  --background: 255,255,255;
+  background-color: rgb(24,24,24);
+  cursor: default;
 }
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 2rem 0;
   box-sizing: border-box;
 }
