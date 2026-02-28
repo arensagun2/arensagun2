@@ -38,7 +38,7 @@ export const occupations = [
 
 // About Me Content
 export const aboutMe = `
-    Hi, I’m Ian, a passionate Software Engineer with a strong foundation in Computer Science. 
+    Hi, I’m Ian, a Software Engineer with a strong foundation in Computer Science. 
     I love tackling complex problems through creative solutions and critical thinking. 
     My curiosity drives me to constantly learn, experiment, and grow — whether it’s exploring new technologies or refining my craft.
     When I’m not deep in code, you’ll probably find me gaming, chatting on Discord, or brainstorming new ideas with friends. 
@@ -47,11 +47,6 @@ export const aboutMe = `
 
 // Projects
 export const projects = [
-    {
-        name: "Coupled", 
-        link: "https://twocoupled.vercel.app/",
-        desc: "A web application made for couples"
-    },
     {
         name: "StemUp", 
         link: "https://stemup.web.app/",
