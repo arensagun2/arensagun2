@@ -1,5 +1,6 @@
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faFilePdf } from '@fortawesome/free-regular-svg-icons'
+import stemUpImg from '../assets/StemUp.png'
 
 // Name
 export const fullname = "ArenJosiah Sagun"
@@ -33,7 +34,8 @@ export const occupations = [
     "Software Engineer", 
     "Front-End Developer", 
     "Engineer", 
-    "Gamer"
+    "Gamer",
+    "Application Developer"
 ]
 
 // About Me Content
@@ -45,11 +47,33 @@ export const aboutMe = `
     I’m always excited to collaborate, share knowledge, and take on new challenges — let’s build something amazing together!
 `;
 
+// Skills
+export const skills = [
+    {
+        category: "Languages",
+        items: ["JavaScript", "TypeScript", "Python", "Java", "C/C++", "C#", "HTML", "CSS"]
+    },
+    {
+        category: "Frameworks & Libraries",
+        items: ["React", "Angular", "NextJS", "ViteJS", "Flutter", "Flask"]
+    },
+    {
+        category: "Tools & Platforms",
+        items: ["Git", "Firebase", "Azure DevOps", "Docker", "Heroku"]
+    },
+    {
+        category: "Databases & APIs",
+        items: ["SQL Server", "MySQL", "REST APIs", "Discord API"]
+    }
+]
+
 // Projects
 export const projects = [
     {
-        name: "StemUp", 
+        name: "StemUp",
         link: "https://stemup.web.app/",
-        desc: "A web application made for students"
+        desc: "A web application made for students to access STEM resources, tools, and collaborative learning in one place.",
+        image: stemUpImg,
+        tags: ["React", "Firebase", "TypeScript"]
     }
 ]

@@ -1,19 +1,10 @@
 import { useEffect } from 'react'
 import './App.css'
 import AboutMe from './sections/AboutMe';
+import Skills from './sections/Skills';
 import Projects from './sections/Projects';
-import { fullname } from './lang/en-us';
+import Header from './sections/Header';
 import { motion, useMotionTemplate, useMotionValue, useSpring } from 'motion/react';
-
-function Header() {
-  return (
-    <div className='header-container'>
-      <div className='header-card'>
-        <h1 className='title name'>{fullname}</h1>
-      </div>
-    </div>
-  )
-}
 
 export default function App() {
   const mouseX = useMotionValue(0);
@@ -36,21 +27,21 @@ export default function App() {
   }, [])
 
   return (
-    <div className='main-body'>
+    <>
       <motion.div className='follow'
         style={{
-          position: "fixed",
-          top: -250,
-          left: -250,
           translateX: useMotionTemplate`${smoothX}px`,
           translateY: useMotionTemplate`${smoothY}px`,
         }}
-      ></motion.div>
+      />
+      <div className='main-body'>
       <Header />
       <div className='content-body'>
         <AboutMe />
+        <Skills />
         <Projects />
       </div>
     </div>
+    </>
   )
 }
