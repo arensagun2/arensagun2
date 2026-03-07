@@ -31,3 +31,12 @@ body {
   padding: 2rem 0;
   box-sizing: border-box;
 }
+
+@media (max-width: 600px) {
+  :root {
+    padding: 0.25rem;
+  }
+  body {
+    padding: 0.5rem 0;
+  }
+}

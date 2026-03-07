@@ -24,3 +24,17 @@
     color: #444;
     margin: 0;
 }
+
+@media (max-width: 600px) {
+    .about-me {
+        padding: 2rem 1.25rem 3rem;
+    }
+
+    .about-me h1 {
+        font-size: 1.5rem;
+    }
+
+    .about-me p {
+        font-size: 15px;
+    }
+}

@@ -113,3 +113,21 @@
     background: #3700ff;
     color: #fff;
 }
+
+@media (max-width: 600px) {
+    .projects {
+        padding: 2rem 1.25rem 3rem;
+    }
+
+    .projects h1 {
+        font-size: 1.5rem;
+    }
+
+    .project-image {
+        height: 160px;
+    }
+
+    .project-body {
+        padding: 1.25rem;
+    }
+}
