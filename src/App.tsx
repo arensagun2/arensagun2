@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import './App.css'
 import AboutMe from './sections/AboutMe';
+import Experience from './sections/Experience';
 import Skills from './sections/Skills';
 import Projects from './sections/Projects';
 import Header from './sections/Header';
@@ -38,6 +39,7 @@ export default function App() {
       <Header />
       <div className='content-body'>
         <AboutMe />
+        <Experience />
         <Skills />
         <Projects />
       </div>
