@@ -7,11 +7,11 @@ import {
     SiJavascript, SiTypescript, SiPython, SiCplusplus,
     SiHtml5, SiReact, SiAngular, SiNextdotjs, SiVite,
     SiFlutter, SiFlask, SiDotnet, SiGit, SiFirebase, SiDocker,
-    SiHeroku, SiMysql, SiDiscord, SiRacket
+    SiHeroku, SiMysql, SiDiscord, SiRacket, SiLua, SiSnowflake
 } from 'react-icons/si'
 import { FaJava, FaAws } from 'react-icons/fa'
 import { TbBrandCSharp, TbBrandCss3, TbSql } from 'react-icons/tb'
-import { VscAzureDevops } from 'react-icons/vsc'
+import { VscAzureDevops, VscAzure } from 'react-icons/vsc'
 import { Icon as IconifyIcon } from '@iconify/react'
 import powerBiIcon from '@iconify-icons/logos/microsoft-power-bi'
 
@@ -27,6 +27,7 @@ const colorMap: Record<string, string> = {
     'HTML':         '#E34F26',
     'CSS':          '#1572B6',
     'Racket':       '#9F1D20',
+    'Lua':          '#2C2D72',
     'React':        '#61DAFB',
     'Angular':      '#DD0031',
     'NextJS':       '#000000',
@@ -37,11 +38,14 @@ const colorMap: Record<string, string> = {
     'Git':          '#F05032',
     'Firebase':     '#FFCA28',
     'Azure DevOps': '#0078D4',
+    'Azure Data Factory': '#0078D4',
+    'Azure Functions': '#0078D4',
     'Docker':       '#2496ED',
     'Heroku':       '#430098',
     'AWS':          '#FF9900',
     'MySQL':        '#4479A1',
     'SQL Server':   '#CC2927',
+    'Snowflake':    '#29B5E8',
     'Discord API':  '#5865F2',
 }
 
@@ -55,6 +59,7 @@ const iconMap: Record<string, IconType> = {
     'HTML':         SiHtml5,
     'CSS':          TbBrandCss3,
     'Racket':       SiRacket,
+    'Lua':          SiLua,
     'React':        SiReact,
     'Angular':      SiAngular,
     'NextJS':       SiNextdotjs,
@@ -65,12 +70,15 @@ const iconMap: Record<string, IconType> = {
     'Git':          SiGit,
     'Firebase':     SiFirebase,
     'Azure DevOps': VscAzureDevops,
+    'Azure Data Factory': VscAzure,
+    'Azure Functions': VscAzure,
     'Docker':       SiDocker,
     'Heroku':       SiHeroku,
     'AWS':          FaAws,
     'Power BI':     PowerBiIcon,
     'MySQL':        SiMysql,
     'SQL Server':   TbSql,
+    'Snowflake':    SiSnowflake,
     'Discord API':  SiDiscord,
 }
 

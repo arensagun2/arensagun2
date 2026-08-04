@@ -39,11 +39,12 @@ export const occupations = [
     "Tech Enthusiast",
     "Problem Solver",
     "Creative Thinker",
+    "Software Developer"
 ]
 
 // About Me Content
 export const aboutMe = `
-    Hi, I’m Ian, a Software Engineer with a strong foundation in Computer Science. 
+    Hi, I’m Aren, but you can call me Ian, a Software Engineer with a strong foundation in Computer Science. 
     I love tackling complex problems through creative solutions and critical thinking. 
     My curiosity drives me to constantly learn, experiment, and grow — whether it’s exploring new technologies or refining my craft.
     When I’m not deep in code, you’ll probably find me gaming, chatting on Discord, or brainstorming new ideas with friends. 
@@ -54,7 +55,7 @@ export const aboutMe = `
 export const skills = [
     {
         category: "Languages",
-        items: ["JavaScript", "TypeScript", "Python", "Java", "C/C++", "C#", "HTML", "CSS", "Racket"]
+        items: ["JavaScript", "TypeScript", "Python", "Java", "C/C++", "C#", "HTML", "CSS", "Racket", "Lua"]
     },
     {
         category: "Frameworks & Libraries",
@@ -62,11 +63,11 @@ export const skills = [
     },
     {
         category: "Tools & Platforms",
-        items: ["Git", "Firebase", "Azure DevOps", "Docker", "Heroku", "AWS", "Power BI"]
+        items: ["Git", "Firebase", "Azure DevOps", "Azure Data Factory", "Azure Functions", "Docker", "Heroku", "AWS", "Power BI"]
     },
     {
         category: "Databases & APIs",
-        items: ["SQL Server", "MySQL", "Discord API"]
+        items: ["SQL Server", "MySQL", "Snowflake", "Discord API"]
     },
     {
         category: "Other",
@@ -111,6 +112,13 @@ export const experience = [
         ]
     },
 ]
+
+// Contact
+export const contact = {
+    phone: "(781) 901-3740",
+    email: "arensagun2@gmail.com",
+    location: "Boston, MA"
+}
 
 // Projects
 export const projects = [

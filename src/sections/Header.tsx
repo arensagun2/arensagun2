@@ -20,7 +20,7 @@ export default function Header() {
             <div className='content'>
                 <div className='information'>
                     <div className='text'>
-                        <h1 className='name'>Hi Visitor! <br></br>I'm <span>{fullname}.</span></h1>
+                        <h1 className='name'>Hi! <br></br>I'm <span>{fullname}.</span></h1>
                         <h3 className='sub'>I am a
                             <motion.span 
                                 key={occupations[i]}

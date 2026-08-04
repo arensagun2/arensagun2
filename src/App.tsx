@@ -4,6 +4,7 @@ import AboutMe from './sections/AboutMe';
 import Experience from './sections/Experience';
 import Skills from './sections/Skills';
 import Projects from './sections/Projects';
+import Contact from './sections/Contact';
 import Header from './sections/Header';
 import { motion, useMotionTemplate, useMotionValue, useSpring } from 'motion/react';
 
@@ -42,6 +43,7 @@ export default function App() {
         <Experience />
         <Skills />
         <Projects />
+        <Contact />
       </div>
     </div>
     </>
