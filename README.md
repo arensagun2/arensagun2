@@ -10,3 +10,4 @@ A personal portfolio website built with ViteJS and Typscript to show my skills a
 
 * Vite
 * Typescript
+* Claude
